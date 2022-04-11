@@ -410,7 +410,16 @@ div.item {
 
 .contact .box-container {
   display: flex;
+
 }
+
+@media (max-width:2000px){
+  .contact .box-container {
+    margin: 0 5%;
+    
+  }
+  
+  }
 
 .contact .box-container .row {
   display: inline-flex;
@@ -932,3 +941,4 @@ div.item {
     padding:0 0.5rem;
   }
 }
+

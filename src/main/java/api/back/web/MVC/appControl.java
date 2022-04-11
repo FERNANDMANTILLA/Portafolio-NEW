@@ -10,16 +10,15 @@ import api.back.web.Entity.email;
 
 
 @Controller
-@RequestMapping("/")
+
 public class appControl {
     
     //requestMapping index 
-    @GetMapping("/index")
+    @GetMapping("/")
     public ModelAndView home() {
         return new ModelAndView("index")
         .addObject("email", new email());
     }
-
 
 
 

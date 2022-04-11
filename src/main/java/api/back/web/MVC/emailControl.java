@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import api.back.web.Entity.email;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -25,9 +27,10 @@ public class emailControl {
     //post email
 
     @PostMapping("/save")
+   
     public void getemail(@Validated email e, BindingResult result, Model model) {
         if (result.hasErrors()) {
-            model.addAttribute("error", "error");
+            System.out.println(result.toString());
         } else {
             emailRepo.save(e);  //save email
         }
