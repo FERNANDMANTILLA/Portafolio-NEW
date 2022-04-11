@@ -30,13 +30,13 @@
         <div class="modal-content">
             
             <div class="modal-header">
-                <span class="close">&times;</span>
+                
                 <h2>Message Successfully Sent </h2> <img src="https://www.svgrepo.com/show/13650/success.svg" alt="">
                 
             </div>
             <div class="modal-body">
                 <p>I'll get in contact with you soon.</p>
-                <button  class="btn">Okay</button>
+                
             </div>
         </div>
     </div>
@@ -392,22 +392,22 @@
         <div class="box-container">
             <form action="?"  target="dummyframe" th:action="@{/api/save}"  th:object="${email}" method="post" class="row" >
                 <h3>Contact me</h3>
-                <div class="inputBox">
+                <div id="namebox" class="inputBox">
                     <span class="fas fa-user"></span>
-                    <input id="name" type="text" th:field="*{name}" placeholder="Full Name" >
+                    <input id="name" type="text" th:field="*{name}" placeholder="Full Name" required >
                 </div>
-                <div class="inputBox">
+                <div id="emailbox" class="inputBox">
                     <span class="fas fa-envelope"></span>
-                    <input id="email"  type="text" th:field="*{email}" placeholder="Email">
+                    <input id="email"  type="text" th:field="*{email}" placeholder="Email" required>
                 </div>
-                <div class="inputBox">
+                <div id="numberbox" class="inputBox">
                     <span class="fas fa-phone"></span>
-                    <input id="number" type="number" th:field="*{number}" placeholder="Phone Number">
+                    <input id="number" type="number" th:field="*{number}" placeholder="Phone Number" >
                 </div>
-                <div class="inputBox">
-                    <textarea  id="message" cols="10" rows="10" placeholder="Write something"th:field="*{message}"></textarea>
+                <div id="messagebox"class="inputBox">
+                    <textarea  id="message" cols="10" rows="10" placeholder="Write something"th:field="*{message}" required></textarea>
                 </div>
-                <button class="btn" onclick="openMessageModal()" > Submit</button>
+                <button class="btn" onclick="validationinputs()" > Submit</button>
                     <audio id="song" src="stuff/SC.mp3"></audio> 
             </form>
 

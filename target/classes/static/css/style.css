@@ -442,10 +442,16 @@ div.item {
   margin: 1.5rem 0;
   background: #0f0f0f90;
   border: var(--border);
+  color: whitesmoke;
+}
+
+.contact .box-container .row .inputBox.error {
+  border: 1px solid rgba(255, 0, 0, 0.402);
+  color: rgba(255, 0, 0, 0.517);
 }
 
 .contact .box-container .row .inputBox span {
-  color: #fff;
+
   font-size: 2rem;
   padding-left: 2rem;
 }

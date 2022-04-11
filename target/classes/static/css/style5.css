@@ -372,13 +372,15 @@ img.hover-shadow {
   padding: 2% 1%;
   border-bottom: 1px solid #000;
   display: flex;
+  flex:0 1 10rem;
+  align-items: center;
 }
 
 
 .messagemodal .modal-content {
   background-color: #1b1b1b;
   color: rgb(255, 255, 255);
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
   justify-content: center;
@@ -393,8 +395,8 @@ img.hover-shadow {
 
 .modal-header img {
   width: 4rem;
-  left: -10px;
   position: relative;
+  margin-left:0.5rem;
 }
 
 .messagemodal.active {
@@ -407,4 +409,8 @@ img.hover-shadow {
   transition: 1s;
   display: none;
 
+}
+
+.modal-body p{
+  margin: 10vh;
 }

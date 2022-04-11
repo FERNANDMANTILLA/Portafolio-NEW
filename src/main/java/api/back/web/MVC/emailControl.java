@@ -26,11 +26,11 @@ public class emailControl {
 
     @PostMapping("/save")
     public void getemail(@Validated email e, BindingResult result, Model model) {
-        /**if (result.hasErrors()) {
+        if (result.hasErrors()) {
             model.addAttribute("error", "error");
         } else {
             emailRepo.save(e);  //save email
-        }**/
+        }
         
         }
     //get all emails
